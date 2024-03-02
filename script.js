@@ -2,7 +2,10 @@ const inputBox = document.getElementById("inputbox");
 const listContainer = document.getElementById("list-container");
 function addTask(){
     if(inputBox.value === ''){
+        
+        console.log("hello")
         alert("you must write something");
+
     }
     else{
         let li = document.createElement("li");
@@ -17,10 +20,10 @@ function addTask(){
 }
 
 listContainer.addEventListener("click",function(e){
-    if(e.target.tagName === "li"){
+    if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
     }
     else if(e.target.tagName === "SPAN"){
-        e.target.parrentElement.remove()
+        e.target.parentElement.remove();
     }
-})
+},false);
